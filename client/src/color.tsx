@@ -14,14 +14,18 @@ function App() {
   return (
     <>
       <h1>Path: {path}</h1>
+      <h1>Testing 1 Testing</h1>
       <h1>Message: {message}</h1>
       <button
         type="button"
-        onClick={() => setPath("http://localhost:3001/message")}
+        onClick={() => {
+          console.log('click action')
+          setPath("https://3.133.125.57/message")
+        }}
       >Message</button>
       <button
         type="button"
-        onClick={() => setPath("http://localhost:3001/api")}
+        onClick={() => setPath("https://3.133.125.57/api")}
       >Api</button>
       <button
         type="button"

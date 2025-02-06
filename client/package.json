@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && aws s3 sync dist 's3://demo-app-frontend-bobby1014/' && aws cloudfront create-invalidation --distribution-id=E1AXFV9G5STSBL --paths '/*'"
   },
   "dependencies": {
     "@types/react-bootstrap": "^0.32.37",
