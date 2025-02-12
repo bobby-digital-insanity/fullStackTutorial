@@ -14,18 +14,19 @@ function App() {
   return (
     <>
       <h1>Path: {path}</h1>
-      <h1>Testing 1 Testing</h1>
+      <h1>HTTPS on browser -{'>'} HTTPS ALB -{'>'} (HTTPS Target Group?) -{'>'} HTTP to EC2 Instance</h1>
+      <h1>All while using another SSL Cert for bvogs.com (main domain), and api.bvogs.com (ALB custom domain)</h1>
       <h1>Message: {message}</h1>
       <button
         type="button"
         onClick={() => {
           console.log('click action')
-          setPath("https://3.133.125.57/message")
+          setPath("https://api.bvogs.com/message")
         }}
       >Message</button>
       <button
         type="button"
-        onClick={() => setPath("https://3.133.125.57/api")}
+        onClick={() => setPath("https://api.bvogs.com/api")}
       >Api</button>
       <button
         type="button"

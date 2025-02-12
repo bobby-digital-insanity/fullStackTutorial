@@ -12,11 +12,11 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/api", (req, res) => {
-    res.json({ message: "Hello from server! (api)" });
+    res.json({ message: "Secure hello from server! (api)" });
   });
 
 app.get('/message', (req, res) => {
-    res.json({ message: "Message from server! (message)" });
+    res.json({ message: "Secure message from server! (message)" });
 });
 
 app.listen(PORT, () => {
