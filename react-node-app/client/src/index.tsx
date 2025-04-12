@@ -14,7 +14,17 @@ function App() {
   return (
     <>
       <h1>Path: {path}</h1>
-      <h1>HTTPS on browser -{'>'} HTTPS ALB -{'>'} (HTTPS Target Group?) -{'>'} HTTP to EC2 Instance</h1>
+      
+      <img 
+      src="https://demo-app-frontend-bobby1014.s3.us-east-2.amazonaws.com/media/h14pjp259s961.jpg"
+      alt="CoolCat"
+      />
+      <img 
+      src="https://demo-app-frontend-bobby1014.s3.us-east-2.amazonaws.com/media/1535763269540.jpg"
+      alt="MeSmile"
+      />
+
+      
       <h1>All while using another SSL Cert for bvogs.com (main domain), and api.bvogs.com (ALB custom domain)</h1>
       <h1>Message: {message}</h1>
       <button
