@@ -1,8 +1,32 @@
 import React, { useState } from "react";
+import { Gallery } from "react-grid-gallery";
 
 function App() {
   const [path, setPath] = useState("");
   const [message, setMessage] = useState("");
+  const images = [
+    {
+       src: "https://demo-app-frontend-bobby1014.s3.us-east-2.amazonaws.com/media/h14pjp259s961.jpg",
+       width: 540,
+       height: 719,
+       isSelected: true,
+       caption: "a cool cat",
+    },
+    {
+       src: "https://demo-app-frontend-bobby1014.s3.us-east-2.amazonaws.com/media/1535763269540.jpg",
+       width: 540,
+       height: 339,
+       tags: [
+          { value: "Ocean", title: "Ocean" },
+          { value: "People", title: "People" },
+       ],
+    },
+    {
+       src: "https://demo-app-frontend-bobby1014.s3.us-east-2.amazonaws.com/media/IMG_1656.jpg",
+       width: 540,
+       height: 720,
+    },
+ ];
 
   React.useEffect(() => {
       fetch(path)
@@ -11,21 +35,28 @@ function App() {
       ); 
     });
 
+
+ 
+
   return (
     <>
       <h1>Path: {path}</h1>
+      <Gallery images={images} />
       
-      <img 
-      src="https://demo-app-frontend-bobby1014.s3.us-east-2.amazonaws.com/media/h14pjp259s961.jpg"
+     <img 
+      src="https://demo-app-frontend-bobby1014.s3.us-east-2.amazonaws.com/media/IMG_1656.jpg"
       alt="CoolCat"
+      width='540'
+      height='720'
       />
+     {/*
+
       <img 
       src="https://demo-app-frontend-bobby1014.s3.us-east-2.amazonaws.com/media/1535763269540.jpg"
       alt="MeSmile"
       />
+      */}
 
-      
-      <h1>All while using another SSL Cert for bvogs.com (main domain), and api.bvogs.com (ALB custom domain)</h1>
       <h1>Message: {message}</h1>
       <button
         type="button"
