@@ -42,7 +42,7 @@ function App() {
 
   return (
     <>
-      <h1>Path Test again: {path}</h1>
+      <h1>Path: {path}</h1>
       <Gallery images={images} />
       
      <img 
