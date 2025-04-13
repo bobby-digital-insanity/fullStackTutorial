@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Gallery } from "react-grid-gallery";
 
-<script type="text/javascript" src="https://js-cdn.dynatracelabs.com/jstag/145e049b9b1/bf05671csb/d7cd2a23085a52ec_complete.js" crossOrigin="anonymous"></script>
-
 function App() {
   const [path, setPath] = useState("");
   const [message, setMessage] = useState("");
